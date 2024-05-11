@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/cal.png" type="image/png">
+    <title>Calculator</title>
+</head>
+<body>
+    <div style="background-image: url(IMG/bg.jpg) ; width: 50%;">
+        <p style="text-align: center; width: 50%; color: rgb(255, 255, 255);">2 Nmubers Addition Machine</p>
+        <input id="num1">
+        <input id="num2">
+        <p id="result" style="color: rgb(255, 255, 255);">Result</p>
+        <button onclick="adding()" style="color: crimson;"><b>ADD</b></button>
+        <button onclick="change()"><b>CLEAR</b></button>
+    </div>
+
+    <div style="background-image: url(IMG/bg.jpg); width: 50%;">
+        <p style="text-align: center; width: 50%; color: rgb(255, 255, 255);">2 Nmubers Subraction Machine</p>
+        <input id="num11">
+        <input id="num22">
+        <p id="result1" style="color: rgb(255, 255, 255);">Result</p>
+        <button onclick="subtracting()" style="color: crimson;"><b>SUB</b></button>
+        <button onclick="change1()"><b>CLEAR</b></button>
+    </div>
+
+    <div style="background-image: url(IMG/bg.jpg); width: 50%;">
+        <p style="text-align: center; width: 50%; color: rgb(255, 255, 255);">2 Nmubers Multiplication Machine</p>
+        <input id="num111">
+        <input id="num222">
+        <p id="result2" style="color: rgb(255, 255, 255);">Result</p>
+        <button onclick="multipliing()" style="color: crimson;"><b>MUL</b></button>
+        <button onclick="change2()"><b>CLEAR</b></button>
+    </div>
+
+    <div style="background-image: url(IMG/bg.jpg) ; width: 50%;">
+        <p style="text-align: center; width: 50%; color: rgb(255, 255, 255);">2 Nmubers Divition Machine</p>
+        <input id="num1111">
+        <input id="num2222">
+        <p id="result3" style="color: rgb(255, 255, 255);">Result</p>
+        <button onclick="dividing()" style="color: crimson;"><b>DIV</b></button>
+        <button onclick="change3()"><b>CLEAR</b></button>
+    </div>
+
+    <script>
+        var input1 = document.getElementById("num1");
+        var input2 = document.getElementById("num2");
+        var total = document.getElementById("result");
+
+        var input11 = document.getElementById("num11");
+        var input22 = document.getElementById("num22");
+        var total1 = document.getElementById("result1");
+
+        var input111 = document.getElementById("num111");
+        var input222 = document.getElementById("num222");
+        var total2 = document.getElementById("result2");
+
+        var input1111 = document.getElementById("num1111");
+        var input2222 = document.getElementById("num2222");
+        var total3 = document.getElementById("result3");
+
+        function adding(){
+            var number1 = input1.value;
+            var number2 = input2.value;
+            var sum = Number(number1) + Number(number2);
+
+            total.textContent = "Result : "+sum;
+        }
+
+        function subtracting(){
+            var number1 = input11.value;
+            var number2 = input22.value;
+            var sub = Number(number1) - Number(number2);
+
+            total1.textContent = "Result : "+sub;
+        }
+
+        function multipliing(){
+            var number1 = input111.value;
+            var number2 = input222.value;
+            var mul = Number(number1) * Number(number2);
+
+            total2.textContent = "Result : "+mul;
+        }
+
+        function dividing(){
+            var number1 = input1111.value;
+            var number2 = input2222.value;
+            var div = Number(number1) / Number(number2);
+
+            total3.textContent = "Result : "+div;
+        }
+
+        function change(){
+            input1.value = null;
+            input2.value = null;
+            total.textContent = "Result : " + 0.00;
+        }
+
+        function change1(){
+            input11.value = null;
+            input22.value = null;
+            total1.textContent = "Result : " + 0.00;
+        }
+
+        function change2(){
+            input111.value = null;
+            input222.value = null;
+            total2.textContent = "Result : " + 0.00;
+        }
+
+        function change3(){
+            input1111.value = null;
+            input2222.value = null;
+            total3.textContent = "Result : " + 0.00;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <input id="input">
+    <button id="add" onclick="add_list()">ADD</button>
+
+    <ol id="list_container">
+        <li onclick="remove(event)">Add Your Todo <button id="del">Delete</button></li>
+    </ol>
+
+    <script>
+        var ul = document.getElementById("list_container");
+        var todo = document.getElementById("input");
+
+        function add_list(){
+            var li = document.createElement("li");
+
+            li.innerHTML = todo.value + " <button onclick='remove(event)'>Delete</button>";
+            ul.append(li);
+        }
+
+        function remove(event){
+            event.target.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
